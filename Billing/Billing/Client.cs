@@ -8,27 +8,10 @@ namespace Billing
 {
     class Client
     {
-        
-            public string Fullname
-        {
-            set { Fullname = value; }
-            get { return Fullname; }
-        }
-            public int port
-        {
-            set { port = value; }
-            get { return port; }
-        }
-            public String ip
-        {
-            set { ip = value; }
-            get { return ip; }
-        }
-            private String Switch
-        {
-            set { Switch = value; }
-            get { return Switch; }
-        }
+            private string Fullname;
+            private int port;
+            private String ip;
+            private String Switch;
 
             public Client(String _Fullname, int _port, String _ip, String _Switch)
             {
@@ -38,5 +21,59 @@ namespace Billing
                 Switch = _Switch + ".vs.bcitelecom.ru";
             }
 
+            public override String ToString()
+            {
+                String str = Switch1;
+                return str;
+            }
+
+            public int Port
+            {
+                get
+                {
+                    return port;
+                }
+
+                set
+                {
+                    port = value;
+                }
+            }
+
+            public string Fullname1
+            {
+                get
+                {
+                    return Fullname;
+                }
+
+                set
+                {
+                    Fullname = value;
+                }
+            }
+
+            public String Ip
+            {
+                get { return ip; }
+
+                set
+                {
+                    ip = value;
+                }
+            }
+
+            public string Switch1
+            {
+                get
+                {
+                    return Switch;
+                }
+
+                set
+                {
+                    Switch = value;
+                }
+            }
     }
 }
