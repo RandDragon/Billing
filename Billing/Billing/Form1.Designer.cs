@@ -124,6 +124,7 @@
             this.btnFindName.TabIndex = 13;
             this.btnFindName.Text = "Find";
             this.btnFindName.UseVisualStyleBackColor = true;
+            this.btnFindName.Click += new System.EventHandler(this.btnFindName_Click);
             // 
             // btnFindDogovor
             // 
