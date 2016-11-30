@@ -22,13 +22,21 @@ namespace Billing
             clientsSort = new List<Client>();
             Clients = new ClientFile();
             bindSrc.DataSource = Clients;
-            bindSrc.DataMember = "ClientsSort";
+            bindSrc.DataMember = "Clients";
             bindSrc.CurrentItemChanged += BindSrc_CurrentItemChanged;
-            dgvClients.DataSource = bindSrc;
             dgvClients.DataSource = Clients;
             dgvClients.DataMember = "ClientsSort";
+            dgvClients.CellDoubleClick += DgvClients_CellDoubleClick;
 
+        }
 
+        private void DgvClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
+            messageBoxCS.AppendFormat("{0} = {1}", "ColumnIndex", "111");
+            messageBoxCS.AppendLine();
+           
+            MessageBox.Show(messageBoxCS.ToString(), "CellDoubleClick Event");
         }
 
         private void BindSrc_CurrentItemChanged(object sender, EventArgs e)
@@ -45,10 +53,11 @@ namespace Billing
                    if(a.Fullname1.Contains(tbName.Text))
                     {
                         Clients.ClientsSort.Add(a);
-                        dgvClients.DataSource = bindSrc;
                     }
                 }
             }
         }
+
+        
     }
 }

@@ -115,6 +115,10 @@
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.Size = new System.Drawing.Size(1246, 150);
             this.dgvClients.TabIndex = 12;
+            this.dgvClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvClients_CellDoubleClick);
+            this.dgvClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvClients_CellDoubleClick);
+            this.dgvClients.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvClients_CellDoubleClick);
+            this.dgvClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvClients_CellDoubleClick);
             // 
             // btnFindName
             // 
